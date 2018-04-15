@@ -1,0 +1,46 @@
+1.ls：查看当前目录下文件，选项（-a查看所有文件 -l查看文件详细信息，-h查看文件大小）
+ 别名 alias ll='ls -al' 
+   Linux：彩色alias ls='ls --color=auto'  
+   macos:彩色alias ls='ls -G' 
+>ls -lh | sort +4 查看文件按大小排列（第4列文件大小）（7列时间）
+2.mkdir：创建文件夹，选项（-p创建一组目录 -m创建model）
+	创建cj目录：mkdir cj 
+	创建cai/jun目录： mkdir cai/jun
+	
+	touch：创建空文件
+3.cd:切换文件夹，选项(-L包含链接的连接路径,-P物理路径,-e,-@) change directory
+	切换到根目录：cd~
+	返回到上一级目录：cd..
+	切换到上次进入的目录：cd-
+	进入当前目录：cd.
+4.pwd:显示当前目录路径，选项（-L查看包含链接的连接路径，-P查看当前实际路径非链接link路径） print working directory
+5.rmdir：删除空目录（remove empty directory）
+6.rm：删除文件或目录（-r recursive 删目录，-f force强制删除）
+	删除cj目录 ：rm -rf  cj/
+	删除cj目录下的所有文件：rm -rf cj/*
+	find . -name "*.txt" | xargs rm  -rf  删除当前目录下说有txt文件
+
+	find . -name "*.lastUpdated" -type f -print -exec rm -rf {} \; 删除当前目录及子目录下的.lastUpdated
+7.cp 拷贝文件（-r 复制目录 -p连带文件属性复制 -d复制链接文件 -a复制文件所有）
+	cp cai/ tem/cai/
+8.mv 剪切[重命名]
+	mv cai tem/cai1
+9.chmod 赋权
+Chmod -R 777 test test目录下所有文件777权限
+chown -R aihps doc/ 把目录及子文件所有权给aihps
+Chown -R aihps：hpsgrp doc/ 把目录及子文件所有权给aihps用户，hpsgrp用户组
+Chgrp -R hpsgrp doc/ 把目录及子文件组所有权，hpsgrp用户组
+
+10.diff 比较文件大小
+>diff a b
+
+11.head 显示文件头几行  ；tail 显示文件后几行
+>head -5 test 显示文件头5行
+>tail -200 test 显示文件最后200行
+>tail -f test 跟踪文件增张。
+
+12.
+	
+	
+
+
